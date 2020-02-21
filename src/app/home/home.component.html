@@ -1,0 +1,19 @@
+<h1>Welcome</h1>
+
+<div class="play-container">    
+    <p> You added  <span (click)="countClick()" > + </span> 
+        {{ clickCounter }} products products to cart
+
+
+    </p> 
+
+</div>
+
+<div class="play-container">
+    <p>
+        <input type="text" [(ngModel)]="name">
+        <br>
+        <strong>Your username </strong> {{ name }}
+
+    </p>
+</div>
