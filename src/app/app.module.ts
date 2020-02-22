@@ -19,7 +19,7 @@ import { HttpInterceptorService } from './http-interceptor.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule 
 
   ],
   providers: [

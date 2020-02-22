@@ -9,7 +9,9 @@ import { HttpService } from '../http.service';
 export class ListComponent implements OnInit {
 
   brews: Object;
+  // Let use Http-Interceptor service instead
   constructor(private _http:HttpService) { }
+  //constructor(private _http: HttpInterceptorService) { }
 
   ngOnInit(): void {
     this._http.getBeer().subscribe(data => {

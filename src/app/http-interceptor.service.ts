@@ -21,5 +21,7 @@ export class HttpInterceptorService implements HttpInterceptor {
     
     //return next.handle(req);
     return next.handle(clone);
-  }
+  } 
+
+ 
 }
