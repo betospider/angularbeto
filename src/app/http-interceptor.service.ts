@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class HttpInterceptorService implements HttpInterceptor {
 
   constructor() { }
@@ -12,7 +13,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler):
   Observable<HttpEvent<any>> {
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTU4MjE2Mzc3M30.JGwYkCU1O_E2H5AddHntio06yzIq-_Z95zHJu5glzkM '
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmV0byIsImlhdCI6MTU4MjMzNDk3MX0.QNSiXJvFNDvv3pcuAR7xb-hvkQ8tP2vc1SvfJNgzx40'
     });
   
     const clone = req.clone({
@@ -23,5 +24,6 @@ export class HttpInterceptorService implements HttpInterceptor {
     return next.handle(clone);
   } 
 
+
  
-}
+} 
