@@ -20,6 +20,12 @@ export class ListComponent implements OnInit {
 
     });
 
+    this._http.setSession().subscribe(data => {
+      this.brews = data;
+      console.log(this.brews);
+
+    });
+
   }
 
 }
