@@ -9,23 +9,18 @@ import { HttpService } from '../http.service';
 export class ListComponent implements OnInit {
 
   brews: Object;
-  // Let use Http-Interceptor service instead
+  token: Object;
+  
   constructor(private _http:HttpService) { }
-  //constructor(private _http: HttpInterceptorService) { }
-
+  
   ngOnInit(): void {
-    this._http.getBeer().subscribe(data => {
-      this.brews = data;
-      console.log(this.brews);
-
-    });
-
-    this._http.setSession().subscribe(data => {
-      this.brews = data;
-      console.log(this.brews);
-
-    });
-
+    
+    //this.userAuthentication(userName, password).subscribe((data: any) => {
+      this._http.getToken().subscribe((data: any) => {
+        this.token = data;
+        console.log(this.token);
+        localStorage.setItem('userToken', data.accessToken);
+      })
+    }
+  
   }
-
-}
