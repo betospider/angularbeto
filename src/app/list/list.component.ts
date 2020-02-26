@@ -22,5 +22,4 @@ export class ListComponent implements OnInit {
         localStorage.setItem('userToken', data.accessToken);
       })
     }
-  
-  }
+}
