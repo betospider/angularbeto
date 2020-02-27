@@ -21,5 +21,9 @@ export class ListComponent implements OnInit {
         console.log(this.token);
         localStorage.setItem('userToken', data.accessToken);
       })
+
+      this._http.addPost().subscribe((data: any) => {
+        
+      })
     }
 }
