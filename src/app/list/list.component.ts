@@ -16,7 +16,9 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     
     //this.userAuthentication(userName, password).subscribe((data: any) => {
-      this._http.getToken().subscribe((data: any) => {
+      var username; // I am not sure if this should be initialized globaly
+      username = "Beto";
+      this._http.getToken(username).subscribe((data: any) => {
         this.token = data;
         console.log(this.token);
         localStorage.setItem('userToken', data.accessToken);

@@ -13,8 +13,10 @@ export class HttpService {
   constructor( private http: HttpClient) { }
   
   //getToken(userName, password):Observable<any> {
-    getToken():Observable<any> {
+    getToken(username):Observable<any> {
       var data;
+      data = 'username='+ username;
+
       var reqHeader = new HttpHeaders({ 'No-Auth':'True', "Authorization": "Basic "});
 
       return this.http.get('http://localhost:3000' + '/token?'+ data, { headers: reqHeader }).pipe(map(
