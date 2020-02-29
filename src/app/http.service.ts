@@ -19,7 +19,8 @@ export class HttpService {
 
       var reqHeader = new HttpHeaders({ 'No-Auth':'True', "Authorization": "Basic "});
 
-      return this.http.get('http://localhost:3000' + '/token?'+ data, { headers: reqHeader }).pipe(map(
+      return this.http.post('http://localhost:3000' + '/token?'+ data, { headers: reqHeader }).pipe(map(
+        
       res => {
         return res;
       },
